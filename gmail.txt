@@ -1,0 +1,4 @@
+to:bdupras@twitter.com -subject:"Review Request" in:inbox is:unread
+((to:data-historical@twitter.com -to:bdupras@twitter.com) OR (to:bdupras@twitter.com subject:Review Request)) in:inbox is:unread 
+(to:data-eng@twitter.com OR to:boulder-internal@twitter.com OR to:boulder-social@twitter.com) -to:bdupras@twitter.com -to:data-historical@twitter.com in:inbox is:unread 
+!to:data-eng@twitter.com !to:data-historical@twitter.com !to:bdupras@twitter.com !to:boulder-internal@twitter.com !to:boulder-social@twitter.com in:inbox is:unread

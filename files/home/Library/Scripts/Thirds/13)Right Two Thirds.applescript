@@ -1,0 +1,1 @@
+tell application "SizeUp" to fit to grid {2, 0, 4, 6}
