@@ -95,6 +95,7 @@ which -s brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebre
 
 brew update && brew upgrade && brew cleanup && brew cask cleanup
 brew install libxml2
+brew install phantomjs198
 brew install watch
 brew install awscli
 brew install ag

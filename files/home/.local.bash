@@ -27,7 +27,6 @@ function _workspace_root_dir_complete() {
   COMPREPLY=($(compgen -W "$(ls $root_dir)" -- "${word}"))
 }
 
-
 function cdw() {
   local project_name=$1
   shift
@@ -55,7 +54,9 @@ alias ll='ls -la'
 alias gs='git status'
 # alias cdw="cd ${HOME}/workspace"
 alias cds='cdw && cd source/'
+alias board='go dhis'
 alias cdf='cdw && cd gnip-fanout'
+alias be='bundle exec'
 
 ## modified from http://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
 export PROMPT_COMMAND=__prompt_command
@@ -89,6 +90,10 @@ function __prompt_command() {
     if [ -e "/opt/twitter/opt/git/etc/bash_completion.d/git-prompt.sh" ]; then
       local PS1_GIT=${BGre}' $(__git_ps1 "(%s) ")'${RCol}
     fi
+  fi
+
+  if [ -e "${HOME}/.git-completion.bash" ]; then
+    source "${HOME}/.git-completion.bash"
   fi
 
   local PS1_HOST="${XCol}\h${RCol}"
